@@ -5,11 +5,13 @@ Console.Clear ();
 Console.Write ("Введите трехзначное число: ");
 int num1 = Convert.ToInt32(Console.ReadLine());
 int num2;
+// если пользователь ввел ОЧЕНь большое число или число двухзначное (можно было ограничиться двузначным )
 while (num1/100<1 || num1/100>9 )
 {
     Console.Write("Вы ошиблись!Введите трехзначное число: ");
     num1 = Convert.ToInt32(Console.ReadLine());
 }
+// выведет третье число (разряд единиц)
 if (num1/100>=1)
 {
     num2 = num1 % 100; 
