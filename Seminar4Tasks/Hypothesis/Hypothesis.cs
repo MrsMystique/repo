@@ -21,7 +21,7 @@ bool CheckPrime(int number)
     Console.WriteLine("Введите четное число");
     Num = Convert.ToInt32(Console.ReadLine());
 
-for (int i = 1; i < Num / 2 + 1; i++) // итерации до половины введенного числа +1, чтобы было нечетное число 
+for (int i = 1; i < Num / 2 + 1; i++) // итерации до половины введенного числа +1
 {
     if (CheckPrime(i) && CheckPrime(Num - i)) // проверяем итератор (является ли он простым числом) и остаток от числа функцией
     {
