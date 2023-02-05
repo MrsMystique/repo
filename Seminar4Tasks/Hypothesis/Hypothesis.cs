@@ -1,14 +1,14 @@
-﻿
-bool Check(int number)
+﻿Console.Clear();
+bool CheckPrime(int number)
 {
     bool flag = true;//проверка положительна если число делится без остатка только на себя и на 1
     for (int j = 2; j < number - 1; j++)
    
-        if (number % j == 0)
+        if (number % j == 0) // если делится на все числа без остатка то число не простое
        
             flag = false;
         
-        return flag;
+        return flag; // вернуть значение булевой переменной 
     
 }
 // Обьявляю переменные 
@@ -22,14 +22,14 @@ bool Check(int number)
 
 for (int i = 1; i < Num / 2 + 1; i++)
 {
-    if (Check(i) && Check(Num - i))
+    if (CheckPrime(i) && CheckPrime(Num - i))
     {
         Flag1 = true;
         Num1 = i;
         Num2 = Num - i;
     }
 }
-if (Flag1)
+if (Flag1 == true)
 {
     Console.WriteLine("{0}+{1}={2}", Num1, Num2, Num);
 }   
