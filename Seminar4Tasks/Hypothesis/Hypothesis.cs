@@ -15,7 +15,7 @@ bool CheckPrime(int number)
     int Num = 0;//четное число которое будем делить
     int Num1 = 0; //первое простое число
     int Num2 = 0; // второе простое число
-    bool Flag1 = false;
+    bool Flag = false;
 
     Console.WriteLine("Введите четное число");
     Num = Convert.ToInt32(Console.ReadLine());
@@ -24,12 +24,12 @@ for (int i = 1; i < Num / 2 + 1; i++)
 {
     if (CheckPrime(i) && CheckPrime(Num - i))
     {
-        Flag1 = true;
+        Flag = true;
         Num1 = i;
         Num2 = Num - i;
     }
 }
-if (Flag1 == true)
+if (Flag == true)
 {
     Console.WriteLine("{0}+{1}={2}", Num1, Num2, Num);
 }   
