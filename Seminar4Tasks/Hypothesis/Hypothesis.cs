@@ -37,6 +37,6 @@ if (Flag == true)
 }   
 else // иначе написать что то гневное
 {
-    Console.WriteLine("Не правда это все!");
+    Console.WriteLine("Гипотеза не работает ну или мой код!");
     Console.ReadLine();
 }
