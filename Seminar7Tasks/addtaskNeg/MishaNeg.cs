@@ -69,16 +69,17 @@ for (int i = 0; i < OriginalPhoto.GetLength(0); i++)
         if(OriginalPhoto[i, j] == NewPhoto[i, j])
         {
             Console.WriteLine($" Пиксели на оригинале {OriginalPhoto[i, j]} [{i},{j}] и на фото, выданном программой {NewPhoto[i, j]} [{i},{j}] одинаковые");
+            count++;
         }
         else
         {
             Console.WriteLine($" Пиксели на оригинале {OriginalPhoto[i, j]} [{i},{j}] и на фото, выданном программой {NewPhoto[i, j]} [{i},{j}] отличаются");
-            count++;
+            
         }
             
     }
       
 }
-Console.WriteLine($"НЕСОВПАДЕНИЙ: {count} ");
+Console.WriteLine($"Совпадений: {count} ");
 
 
