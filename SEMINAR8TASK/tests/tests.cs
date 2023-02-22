@@ -1,24 +1,24 @@
-﻿   
-            Console.Write("Введите количество строк треугольника Паскаля: ");
-            int input = Convert.ToInt32(Console.ReadLine());
- 
-            int rows = Convert.ToInt32(input);
- 
- 
-            for (int j = 0; j < rows; j++)
-            {
-                int side = 1;
-                for (int i = 0; i < rows - j; i++)
-                {
-                    Console.Write("   ");
-                }
- 
-                for (int k = 0; k <= j; k++)
-                {
-                    Console.Write("   {0:D}  ", side); // форматирование целочисленных значений
-                    side = side * (j - k) / (k + 1);// расчет чисел для заполнения
-                }
-                Console.WriteLine();
-                Console.WriteLine();
-            }
+﻿Console.Clear();
+Console.Write("Введите количество строк: ");
+void PrintPascalTriangle(int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        int number = 1;
+        Console.Write("".PadLeft((n - i - 1) * 2));
+
+        for (int j = 0; j <= i; j++)
+        {
+            Console.Write(number + "   ");
+            number = number * (i - j) / (j + 1);
+        }
+
+        Console.WriteLine();
+    }
+}
+
+int rows = int.Parse(Console.ReadLine());
+PrintPascalTriangle(rows);
+
+
            
