@@ -12,7 +12,7 @@ int FillArrayWithUniqNumber(int[] matrix)
     int nextNumber;
     do
     {
-        nextNumber = new Random().Next(10, 100);
+        nextNumber = new Random().Next(10, 100);// только  двухзначные
     }
     while (matrix[nextNumber] != 0);
     matrix[nextNumber] = 1;
@@ -22,7 +22,7 @@ int[,,] Generate3DArray(int rows, int columns, int layer, int[] matrix3d)
 {
     int[,,] returnArray = new int[rows, columns, layer];
 
-    if (rows * columns * layer < 90)
+    if (rows * columns * layer < 90) // макс количество ячеек в матрице
     {
         for (int i = 0; i < returnArray.GetLength(0); i++)
         {

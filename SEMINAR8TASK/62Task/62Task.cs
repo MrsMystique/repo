@@ -11,37 +11,37 @@
 }
 
 
-int[,] PrintSpiral2DArray(int height, int length)
+int[,] PrintSpiral2DArray(int rows, int length)
 {
-    int[,] spiralArray = new int[height, length];
+    int[,] ArrayForSpiralFilling = new int[rows, length];
 
     int i = 0;
     int j = 0;
 
-    int xDirection = 1, yDirection = 0;
-    int direction = 0, sideLength = length;
+    int xAxisDirection = 1; 
+    int yAxisDirection = 0;
+    int direction = 0;
+    int sideLength = length;
 
-    for (int k = 0; k < spiralArray.Length; k++)
+    for (int k = 0; k < ArrayForSpiralFilling.Length; k++)
     {
-        spiralArray[i, j] = k + 1;
+        ArrayForSpiralFilling[i, j] = k + 1;
 
-        --sideLength;
+        sideLength--;
         if (sideLength == 0)
         {
-            
-            sideLength = length * (direction % 2) + height * ((direction + 1) % 2)- (direction/2 - 1) - 2;
+            sideLength = length * (direction % 2) + rows * ((direction + 1) % 2)- (direction/2 - 1) - 2;
 
-
-            int temp = xDirection;
-            xDirection = -yDirection;
-            yDirection = temp;
+            int temp = xAxisDirection;
+            xAxisDirection = - yAxisDirection;
+            yAxisDirection = temp;
             direction++;
         }
-        i += yDirection;
-        j += xDirection;
+        i += yAxisDirection;
+        j += xAxisDirection;
     }
 
-    return spiralArray;
+    return ArrayForSpiralFilling;
 }
 Console.Clear();
 Console.WriteLine("Введите количество строк в матрице: ");
