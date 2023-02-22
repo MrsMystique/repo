@@ -43,6 +43,7 @@ int[,] PrintSpiral2DArray(int rows, int length)
 
     return ArrayForSpiralFilling;
 }
+
 Console.Clear();
 Console.WriteLine("Введите количество строк в матрице: ");
 int row = Convert.ToInt32(Console.ReadLine());

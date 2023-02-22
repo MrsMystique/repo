@@ -15,8 +15,8 @@
  
                 for (int k = 0; k <= j; k++)
                 {
-                    Console.Write("   {0:D}  ", side);
-                    side = side * (j - k) / (k + 1);
+                    Console.Write("   {0:D}  ", side); // форматирование целочисленных значений
+                    side = side * (j - k) / (k + 1);// расчет чисел для заполнения
                 }
                 Console.WriteLine();
                 Console.WriteLine();
