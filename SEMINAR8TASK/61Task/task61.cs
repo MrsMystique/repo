@@ -2,9 +2,8 @@
 
    
 Console.Write("Введите количество строк треугольника Паскаля: ");
-int input = Convert.ToInt32(Console.ReadLine());
  
-int rows = Convert.ToInt32(input);
+int rows = Convert.ToInt32(Console.ReadLine());
  
  
 for (int j = 0; j < rows; j++)
