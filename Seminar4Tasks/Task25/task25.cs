@@ -7,9 +7,16 @@ Console.Write("Введите первое число: ");
 int A = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите первое число: ");
 int B = Convert.ToInt32(Console.ReadLine());
-int result = 1;
-for (int i = 0; i < B; i++)
+
+int RecursionPower(int A, int B)
 {
-   result *= A; 
+    if (B == 0)
+    {
+        return 1;
+    }
+    else
+    {
+         return A*RecursionPower(A, B-1);
+    }
 }
-Console.WriteLine($"А в степени В = {result}");
+Console.WriteLine(RecursionPower(A,B));

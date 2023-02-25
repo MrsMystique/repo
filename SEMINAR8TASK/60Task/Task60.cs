@@ -50,6 +50,7 @@ void Print3DArray(int[,,] int3DArray)
                 Console.Write($"[{i},{j},{k}] {int3DArray[i, j, k]} ");
             }
             Console.WriteLine();
+            Console.WriteLine();
         }
         
     }

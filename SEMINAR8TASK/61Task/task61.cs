@@ -6,18 +6,18 @@ Console.Write("Введите количество строк треугольн
 int rows = Convert.ToInt32(Console.ReadLine());
  
  
-for (int j = 0; j < rows; j++)
+for (int rowNum = 0; rowNum < rows; rowNum++)
 {
-    int side = 1;
-    for (int i = 0; i < rows - j; i++)
+    int StartValue = 1;
+    for (int i = 0; i < rows - rowNum; i++)
     {
         Console.Write("   ");
     }
  
-    for (int k = 0; k <= j; k++)
+    for (int element = 0; element <= rowNum; element++)
     {
-        Console.Write("   {0:D}  ", side); // форматирование целочисленных значений
-        side = side * (j - k) / (k + 1);// расчет чисел для заполнения
+        Console.Write("   {0:D}  ", StartValue); // форматирование целочисленных значений
+        StartValue = StartValue * (rowNum - element) / (element + 1);// расчет чисел для заполнения
     }
     Console.WriteLine();
     Console.WriteLine();

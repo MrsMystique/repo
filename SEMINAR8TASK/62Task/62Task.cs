@@ -51,3 +51,4 @@ Console.WriteLine("Введите количество столбцов в ма�
 int column = Convert.ToInt32(Console.ReadLine());
 int[,] matrix = PrintSpiral2DArray(row,column);
 PrintMatrix(matrix);
+
